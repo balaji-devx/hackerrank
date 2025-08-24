@@ -36,3 +36,14 @@ if __name__ == '__main__':
     n = int(input())
     for i in range(1,n+1):
         print(i,end="")
+n=int(input())
+words = []
+count = {}
+for _ in range(n):
+    word=input().strip()
+    if word not in count:
+        words.append(word)
+    count[word]=count.get(word,0)+1
+print(len(words))
+print(" ".join(str(count[word]) for word in words))
+
